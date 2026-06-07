@@ -56,7 +56,6 @@ async function extractPlaceData(page, url) {
 
     const browser = await chromium.launch({
         headless: config.HEADLESS,
-        // executablePath: config.CHROMIUM_PATH,
         executablePath: resolveBrowserPath(),
     });
 
