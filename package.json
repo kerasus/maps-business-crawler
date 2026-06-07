@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "type": "commonjs",
   "description": "",
-  "main": "index.js",
+  "main": "electron/main.js",
   "scripts": {
+    "start": "electron .",
+    "build": "npx electron-builder",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,9 +14,18 @@
   "private": true,
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "electron": "^42.3.3",
+    "electron-builder": "^26.15.0",
     "eslint": "^10.4.1"
   },
   "dependencies": {
     "playwright": "^1.60.0"
+  },
+  "build": {
+    "appId": "com.maps.crawler",
+    "productName": "MapsCrawler",
+    "win": {
+      "target": "nsis"
+    }
   }
 }
