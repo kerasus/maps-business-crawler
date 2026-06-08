@@ -10,8 +10,10 @@ async function run() {
     //     process.exit(1);
     // }
 
-    const crawler = CrawlerFactory.create('google');
+    // const crawler = CrawlerFactory.create('google');
     // const crawler = CrawlerFactory.create('balad');
+    // const crawler = CrawlerFactory.create('neshan');
+    const crawler = CrawlerFactory.create('mapir');
 
     await crawler.crawl({
         keyword: "پروتئین",
