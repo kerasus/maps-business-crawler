@@ -9,13 +9,13 @@ class CrawlerFactory {
         switch (provider) {
 
             case "balad":
-                return new BaladStrategy();
+                return new BaladStrategy({ provider: "balad" });
 
             case "google":
-                return new GoogleStrategy();
+                return new GoogleStrategy({ provider: "google" });
 
             case "neshan":
-                return new NeshanStrategy();
+                return new NeshanStrategy({ provider: "neshan" });
 
             default:
                 throw new Error(`Unknown provider: ${provider}`);

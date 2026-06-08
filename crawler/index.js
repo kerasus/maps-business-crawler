@@ -2,15 +2,16 @@ const CrawlerFactory = require("./core/CrawlerFactory");
 
 async function run() {
 
-    const provider = process.argv[2];
-    // node index.js google
+    // const provider = process.argv[2];
+    // // node index.js google
+    //
+    // if (!provider) {
+    //     console.log("Please provide provider: google | balad | neshan");
+    //     process.exit(1);
+    // }
 
-    if (!provider) {
-        console.log("Please provide provider: google | balad | neshan");
-        process.exit(1);
-    }
-
-    const crawler = CrawlerFactory.create(provider);
+    const crawler = CrawlerFactory.create('google');
+    // const crawler = CrawlerFactory.create('balad');
 
     await crawler.crawl({
         keyword: "پروتئین",

@@ -1,3 +1,4 @@
+// google maps links collector
 const { chromium } = require("playwright");
 const resolveBrowserPath = require("../utils/browser");
 const fs = require("fs");

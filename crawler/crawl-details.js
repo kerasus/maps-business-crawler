@@ -1,3 +1,4 @@
+// google maps details crawler
 const { chromium } = require("playwright");
 const fs = require("fs");
 const path = require("path");

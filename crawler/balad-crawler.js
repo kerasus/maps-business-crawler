@@ -1,6 +1,6 @@
-import fs from "fs";
-import https from "https";
-import crypto from "crypto";
+const fs = require("fs");
+const https = require("https");
+const crypto = require("crypto");
 
 const CONCURRENCY = 4;
 const MAX_RETRIES = 3;
