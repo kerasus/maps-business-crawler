@@ -64,9 +64,14 @@ class MapIrStrategy extends BaseCrawler {
     }
 
     recordCellResult({ status, newPlaces = 0, cell, retry = null }) {
-        this.progress.processed++;
-
         const label = `${cell.lat},${cell.lng}`;
+
+        if (status === "retry") {
+            console.log(`🔄 retry ${retry}/${MAX_RETRIES} @ ${label}`);
+            return;
+        }
+
+        this.progress.processed++;
 
         if (status === "success") {
             this.progress.success++;
