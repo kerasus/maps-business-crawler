@@ -141,19 +141,13 @@ class NeshanStrategy extends BaseCrawler {
         return this.parseSearchResults(responseText);
     }
 
-    /**
-     * پیلود مخفی JSON را از پاسخ خام API استخراج و رمزگشایی می‌کند.
-     * نشان داده‌های JSON را در یک فرمت رشته‌ای خاص با پیشوند، پسوند و یک بخش جابجا شده wrapping می‌کند.
-     */
     extractAndDecodePayload(rawResponse) {
         try {
             if (!rawResponse) return null;
 
-            // ۱. حذف ۲۸ کاراکتر از ابتدا و انتهای رشته
             let payload = rawResponse.slice(28);
             payload = payload.slice(0, payload.length - 28);
 
-            // ۲. پیدا کردن آخرین '@' که طول جابجایی (Shift Length) بعد از آن قرار دارد
             const lastAtIndex = payload.lastIndexOf("@");
             if (lastAtIndex === -1) return null;
 
@@ -163,14 +157,11 @@ class NeshanStrategy extends BaseCrawler {
             const shiftLength = parseInt(shiftLengthStr, 10);
             if (isNaN(shiftLength)) return null;
 
-            // ۳. برش رشته به دو بخش بر اساس طول جابجایی و جابجایی آن‌ها
             const firstPart = payload.slice(0, shiftLength);
             const secondPart = payload.slice(shiftLength);
 
-            // ۴. بازسازی رشته Base64 اصلی و رمزگشایی آن
             const base64String = secondPart + firstPart;
 
-            // استفاده از Buffer نیتیو Node.js برای رمزگشایی Base64
             const decodedString = Buffer.from(base64String, "base64").toString("utf-8");
             return JSON.parse(decodedString);
         } catch (error) {
@@ -179,9 +170,6 @@ class NeshanStrategy extends BaseCrawler {
         }
     }
 
-    /**
-     * پاسخ خام API را پارس کرده، پیلود را رمزگشایی می‌کند و آیتم‌ها را با URL آیکون‌ها غنی‌سازی می‌کند.
-     */
     parseSearchResults(rawResponse) {
         const DEFAULT_ICON_URL = "https://neshan.org/maps/87364178129920db7341.png";
 
@@ -195,12 +183,10 @@ class NeshanStrategy extends BaseCrawler {
             const iconBaseUrl = decodedData.iconBaseUrl || "";
 
             const enrichedItems = decodedData.items.map((item, index) => {
-                // پردازش آیکون اصلی
                 if (item.iconUri) {
                     item.icon = new IconClass(item.iconUri, iconBaseUrl + item.iconUri).toJson();
                 }
 
-                // پردازش اطلاعات balloon و آیکون نقشه
                 if (item.balloonInfo) {
                     const balloonIconUri = item.balloonInfo.iconUri;
                     const fullIconUrl = balloonIconUri ? iconBaseUrl + balloonIconUri : DEFAULT_ICON_URL;
@@ -283,7 +269,6 @@ class NeshanStrategy extends BaseCrawler {
             return results;
 
         } catch (error) {
-            console.log("error ------> ", error);
             if (retry < MAX_RETRIES) {
                 this.recordCellResult({ status: "retry", cell, retry: retry + 1 });
                 const backoff = Math.min(BASE_DELAY * 2 ** retry, MAX_DELAY) + Math.random() * 300;
@@ -346,9 +331,6 @@ class NeshanStrategy extends BaseCrawler {
     }
 }
 
-/**
- * کلاس مدیریت آیکون‌ها با نام‌گذاری استاندارد و خوانا
- */
 class IconClass {
     #uri;
     #url;
