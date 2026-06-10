@@ -1,0 +1,10 @@
+.git
+.idea
+laravel/vendor
+laravel/node_modules
+crawler/node_modules
+crawler/dist
+crawler/data/*
+!crawler/data/.gitkeep
+crawler/electron
+crawler/ui

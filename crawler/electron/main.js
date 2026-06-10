@@ -26,7 +26,7 @@ function createWindow() {
 }
 
 function runScript(scriptPath) {
-    const process = spawn("node", [scriptPath]);
+    const process = spawn("node", [path.join(__dirname, "..", scriptPath)]);
 
     process.stdout.on("data", (data) => {
         mainWindow.webContents.send("log-update", data.toString());
@@ -44,11 +44,11 @@ function runScript(scriptPath) {
 app.whenReady().then(createWindow);
 
 ipcMain.on("collect-links", () => {
-    runScript("crawler/collect-links.js");
+    runScript("collect-links.js");
 });
 
 ipcMain.on("crawl-details", () => {
-    runScript("crawler/crawl-details.js");
+    runScript("crawl-details.js");
 });
 
 app.on("window-all-closed", () => {

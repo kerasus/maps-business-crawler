@@ -2,11 +2,11 @@
 const { chromium } = require("playwright");
 const fs = require("fs");
 const path = require("path");
-const config = require("../config");
-const resolveBrowserPath = require("../utils/browser");
+const config = require("./config");
+const resolveBrowserPath = require("./utils/browser");
 
-const INPUT_FILE = path.join(__dirname, "../data/places.json");
-const OUTPUT_FILE = path.join(__dirname, "../data/places-details.json");
+const INPUT_FILE = path.join(__dirname, "data/places.json");
+const OUTPUT_FILE = path.join(__dirname, "data/places-details.json");
 
 function ensureJsonFile(filePath) {
     if (!fs.existsSync(filePath)) {

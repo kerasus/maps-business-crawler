@@ -1,0 +1,71 @@
+services:
+  mysql:
+    env_file:
+      - .env.docker
+    image: mysql:8.4
+    container_name: maps-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-secret}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-maps_crawler}
+      MYSQL_USER: ${MYSQL_USER:-maps}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-secret}
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p\"$$MYSQL_ROOT_PASSWORD\" || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  laravel:
+    env_file:
+      - .env.docker
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: maps-laravel
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./laravel:/var/www/html
+      - ./crawler/data:/var/www/data
+    ports:
+      - "${LARAVEL_PORT:-8000}:8000"
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+      DB_CONNECTION: mysql
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_DATABASE: ${MYSQL_DATABASE:-maps_crawler}
+      DB_USERNAME: ${MYSQL_USER:-maps}
+      DB_PASSWORD: ${MYSQL_PASSWORD:-secret}
+      CRAWLER_URL: http://crawler:3000
+      DATA_PATH: /var/www/data
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  crawler:
+    env_file:
+      - .env.docker
+    build:
+      context: ./crawler
+      dockerfile: ../docker/node/Dockerfile
+    container_name: maps-crawler
+    restart: unless-stopped
+    volumes:
+      - ./crawler:/app
+      - /app/node_modules
+    ports:
+      - "${CRAWLER_PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      CHROMIUM_PATH: /usr/bin/chromium
+      PORT: 3000
+
+volumes:
+  mysql_data:

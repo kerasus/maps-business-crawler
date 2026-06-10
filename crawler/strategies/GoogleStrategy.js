@@ -2,8 +2,8 @@ const { chromium } = require("playwright");
 const fs = require("fs");
 const path = require("path");
 const BaseCrawler = require("../core/BaseCrawler");
-const resolveBrowserPath = require("../../utils/browser");
-const config = require("../../config");
+const resolveBrowserPath = require("../utils/browser");
+const config = require("../config");
 
 const WORKERS = 4;
 const SPLIT_THRESHOLD = 80;

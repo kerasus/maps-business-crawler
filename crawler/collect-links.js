@@ -1,11 +1,11 @@
 // google maps links collector
 const { chromium } = require("playwright");
-const resolveBrowserPath = require("../utils/browser");
+const resolveBrowserPath = require("./utils/browser");
 const fs = require("fs");
 const path = require("path");
-const config = require("../config");
+const config = require("./config");
 
-const DATA_DIR = path.join(__dirname, "../data");
+const DATA_DIR = path.join(__dirname, "data");
 const OUTPUT_FILE = path.join(DATA_DIR, "places.json");
 
 async function autoScroll(page) {
