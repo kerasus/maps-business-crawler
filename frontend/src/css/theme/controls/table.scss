@@ -1,0 +1,78 @@
+@import "./button.scss";
+.q-table__container {
+  $border-color: $color-outline;
+  $text-color : $color-text2;
+  .q-table__top {
+    color: $color-text1;
+    padding: $space-4 $space-6;
+    // @include typo-table-title;
+    .q-table__control {
+      .q-table__title {
+      }
+    }
+  }
+  .q-table__middle {
+    .q-table {
+      thead {
+        color: $text-color;
+        background: $neutral-99;
+        tr {
+          border-color: $border-color;
+          th {
+            height: $space-11;
+            // border-color: $border-color;
+            // border-top: solid 1px $border-color;
+            padding: $space-3 $space-6;
+            @include typo-label-2;
+            &.th--fix-end{
+              position: sticky;
+              right: 0;
+              z-index: 1;
+              background: $neutral-99;
+            }
+            &.no-y-padding{
+              padding-top: unset;
+              padding-bottom: unset;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            height: $space-10;
+            color: $text-color;
+            padding: $space-2 $space-6;
+            border-bottom-width: 1px;
+            @include typo-body-3;
+            &.td--fix-end{
+              position: sticky;
+              right: 0;
+              z-index: 1;
+              background-color: $color-surface;
+            }
+            &.no-y-padding{
+              padding-top: unset;
+              padding-bottom: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+  .q-table__bottom:not(.q-table__bottom--nodata){
+    display: none;
+  }
+  .q-table__bottom{
+    border-top: unset;
+  }
+}
+.table-wrapper  {
+  &.loading{
+    .q-table__container {
+      .q-table__bottom--nodata{
+        display: none;
+      }
+    }
+  }
+}

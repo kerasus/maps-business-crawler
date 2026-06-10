@@ -1,0 +1,14 @@
+.q-form {
+  $input-gap-y: $space-8;
+  $input-gap-x: $space-6;
+  .row {
+    &.q-col-gutter-md {
+      margin-top: -#{$input-gap-y};
+      margin-left: -#{$input-gap-x};
+      & > * {
+        padding-top: $input-gap-y;
+        padding-left: $input-gap-x;
+      }
+    }
+  }
+}

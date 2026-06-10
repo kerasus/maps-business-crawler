@@ -1,0 +1,61 @@
+{
+  "name": "maps-crawler-frontend",
+  "version": "1.0.0",
+  "description": "پنل مدیریت کراولر نقشه",
+  "productName": "Maps Crawler",
+  "author": "ali <aliesmaeeli20@gmail.com>",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{ts,js,cjs,mjs,vue}\" --fix",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "postinstall": "quasar prepare"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.17",
+    "@vee-validate/rules": "^4.15.0",
+    "axios": "^1.9.0",
+    "jalali-moment": "^3.3.11",
+    "pinia": "^3.0.2",
+    "quasar": "^2.18.1",
+    "quasar-crud": "^2.2.7",
+    "quasar-form-builder": "^3.5.6",
+    "shvl": "^3.0.0",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.0.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "@quasar/app-vite": "^2.1.4",
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.5.0",
+    "autoprefixer": "^10.4.2",
+    "dotenv": "^16.0.3",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^17.16.2",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^15.12.0",
+    "postcss-rtlcss": "^5.6.0",
+    "prettier": "^3.3.3",
+    "typescript": "~5.5.3",
+    "vite-plugin-checker": "^0.9.1",
+    "vue-eslint-parser": "10.2.0",
+    "vue-tsc": "^2.2.8"
+  },
+  "engines": {
+    "node": "^28 || ^26 || ^24 || ^22 || ^20 || ^18",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

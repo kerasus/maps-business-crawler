@@ -1,0 +1,20 @@
+.q-pagination {
+  .q-pagination__content {
+    .q-pagination__middle {
+      .q-btn {
+        min-width: $space-10;
+        @include icon-button(1);
+        .q-btn__content {
+          color: $color-text2;
+          line-height: $space-6;
+          @include typo-body-3;
+        }
+        &.q-btn--standard {
+          .q-btn__content {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}

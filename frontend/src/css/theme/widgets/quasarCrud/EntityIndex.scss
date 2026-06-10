@@ -1,0 +1,73 @@
+.entity-index {
+  & > .q-card {
+    & > .q-toolbar {
+      & > .text-subtitle1 {
+        .doc-card-title {
+          background-image: linear-gradient(310deg, #17ad37 0%, #98ec2d 100%);
+          display: inline-block;
+          padding: 0.55em 0.9em;
+          font-size: 1.2em;
+          font-weight: 700;
+          line-height: 1;
+          color: #fff;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: baseline;
+          border-radius: 0.45rem;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    & > .q-card__section {
+      padding: 0;
+      & > .q-expansion-item {
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+        & > .q-expansion-item__container {
+          & > .q-expansion-item__content {
+            & > .q-chip {
+              margin: $space-1;
+              .q-chip__content {
+                padding: 0 $space-2;
+              }
+              .q-chip__icon--remove {
+                margin: 0;
+              }
+            }
+            & > .row {
+              padding: 0;
+              .quasar-crud-index-table {
+                padding: 0;
+                .q-table__container {
+                  color: inherit;
+                  background-color: transparent;
+                  border-radius: 0;
+                  box-shadow: none;
+                  .q-table__top {
+                    display: none;
+                  }
+                  .q-table__middle {
+                    .q-table {
+                      tbody {
+                        tr {
+                          &:last-child {
+                            td {
+                              border: none;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

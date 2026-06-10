@@ -1,0 +1,110 @@
+.q-tabs {
+  background-color: transparent;
+  border-bottom: 1px solid $color-outline;
+  justify-content: center;
+  color: $primary;
+  .q-tabs__content {
+    .q-tab {
+      .q-tab__content {
+        min-height: $space-5;
+        flex-direction: row;
+        padding: unset;
+        gap: $space-2;
+        .q-icon{
+          font-size: $space-5;
+        }
+      }
+      .q-tab__indicator {
+      }
+      &.q-tab--active {
+        .q-tab__content {
+        }
+      }
+      &.q-tab--inactive {
+        background: transparent;
+        opacity: 1;
+        .q-tab__content {
+          color: $color-text1;
+        }
+      }
+    }
+    @include typo-label-1;
+  }
+
+  &.rounded {
+    border-bottom: unset;
+    @include radius-5;
+    .q-tabs__content {
+      gap: $space-2;
+      .q-tab {
+        @include radius-5();
+        min-height: auto;
+        padding: $space-2 $space-4;
+        .q-tab__content {
+          min-width: auto;
+        }
+        .q-tab__indicator {
+          display: none;
+        }
+        &.q-tab--active {
+          background: $primary;
+          .q-tab__content {
+            color: $color-white;
+            .q-icon{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.tab__filled-background {
+    .q-tabs__content {
+      .q-tab {
+        &.q-tab--inactive {
+          background: $color-background;
+        }
+        &:not(.q-tab--active){
+          &.disabled{
+            background: $color-disable;
+            .q-tab__content{
+              color: $color-disable-variant;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.tab__filled-surface {
+    .q-tabs__content {
+      .q-tab {
+        &.q-tab--inactive {
+          background: $color-surface;
+        }
+      }
+    }
+  }
+
+  &.tabs__filled-surface {
+    background-color: $color-surface;
+    flex: 0 0 auto;
+  }
+
+  &.tabs__filled-background {
+    .q-tabs__content {
+    background-color: $color-background;
+    flex: 0 0 auto;
+    padding: $space-1;
+  }
+}
+
+  &.align-start {
+    justify-content: flex-start;
+}
+
+  &.align-end {
+    justify-content: flex-end;
+}
+}

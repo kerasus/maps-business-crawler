@@ -13,3 +13,8 @@ crawler/node_modules
 crawler/dist
 crawler/data/*
 !crawler/data/.gitkeep
+
+frontend/node_modules
+frontend/dist
+frontend/.quasar
+frontend/.env

@@ -1,0 +1,20 @@
+@import "assets";
+@import "../button";
+
+.form-builder-date-time {
+  .q-field {
+    .q-field__inner{
+      direction: ltr #{"/* rtl:ignore */"}; // https://github.com/quasarframework/quasar/issues/5828#issuecomment-563248909direction: ltr;
+      .q-field__control{
+        .q-field__control-container {
+          .q-field__native{
+            padding-right: $space-1;
+          }
+        }
+      }
+    }
+  }
+  &.required {
+    @include form-builder-required-field;
+  }
+}

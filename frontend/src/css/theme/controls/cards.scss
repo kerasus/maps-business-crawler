@@ -1,0 +1,48 @@
+.q-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 1rem;
+  box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05) !important;
+  & > .q-toolbar {
+    &,
+    & > .text-subtitle1 {
+      .doc-card-title {
+        background-image: linear-gradient(310deg, #17ad37 0%, #98ec2d 100%);
+        display: inline-block;
+        padding: 0.55em 0.9em;
+        font-size: 1.2em;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 0.45rem;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  &.modal {
+    border-radius: $space-4;
+    box-shadow: $shadow-2;
+    padding: $space-2 $space-4 $space-4 $space-4;
+  }
+  &.dialog {
+    border-radius: $space-5;
+    box-shadow: $shadow-2;
+    padding: $space-6 $space-6 $space-4 $space-6;
+  }
+  &.filter {
+    border-radius: $space-4;
+    box-shadow: $shadow-3;
+    padding: $spacing-none $space-6;
+  }
+}

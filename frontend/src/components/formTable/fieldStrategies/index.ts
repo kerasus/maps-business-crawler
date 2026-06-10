@@ -1,0 +1,6 @@
+export { timeStrategy } from './timeStrategy'
+export { dateStrategy } from './dateStrategy'
+export { fileStrategy } from './fileStrategy'
+export { inputStrategy } from './inputStrategy'
+export { selectStrategy } from './selectStrategy'
+export { dateTimeStrategy } from './dateTimeStrategy'

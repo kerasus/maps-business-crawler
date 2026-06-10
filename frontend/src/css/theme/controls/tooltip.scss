@@ -1,0 +1,50 @@
+.q-tooltip {
+  position: relative;
+  overflow: visible;
+  background-color: $neutral-40;
+  padding: $space-3 $space-4;
+  text-align: justify;
+  color: $color-white;
+  @include radius-3;
+  @include typo-body-4;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - $space-4 / 2);
+    width: $space-4;
+    height: $space-3;
+    background-color: $neutral-40;
+    clip-path: polygon(0% 100%, 100% 100%, 56% 6%, 53% 3%, 50% 0%, 47% 3%, 44% 6%);
+  }
+
+  &.top-position {
+    &::after {
+      content: '';
+      top: 100%;
+      clip-path: polygon(100% 0%, 0% 0%, 44% 94%, 47% 97%, 50% 100%, 53% 97%, 56% 94%)
+    }
+  }
+
+  &.right-position {
+    &::after {
+      content: '';
+      left: 99%;
+      top: 50%;
+      transform: translate(0%, -50%);
+      clip-path: polygon(100% 100%, 100% 0%, 6% 44%, 3% 47%, 0% 50%, 3% 53%, 6% 56%);
+    }
+  }
+
+  &.left-position {
+    &::after {
+      content: '';
+      left: -6%;
+      top: 50%;
+      transform: translate(0%, -50%);
+      clip-path: polygon(0% 0%, 0% 100%, 94% 56%, 97% 53%, 100% 50%, 97% 47%, 94% 44%);
+
+    }
+  }
+}

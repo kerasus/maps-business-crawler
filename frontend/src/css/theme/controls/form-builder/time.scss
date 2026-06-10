@@ -1,0 +1,38 @@
+@import "assets";
+@import "../button";
+
+.form-builder-time {
+  &.required {
+    @include form-builder-required-field;
+  }
+}
+
+.q-menu {
+  &.form-builder-time{
+    max-width: 290px;
+    padding: $space-4;
+    .time-picker {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        padding: $spacing-none $space-2;
+        gap: $space-2;
+        .q-field{
+          .q-field__inner{
+            .q-field__control {
+              .q-field__control-container {
+                .q-field__native{
+                   text-align: center;
+                  }
+                }
+              }
+            }
+          }
+        .time-separator {
+          display: flex;
+          align-items: center;
+          font-size: $space-6;
+          }
+   }
+  }
+}

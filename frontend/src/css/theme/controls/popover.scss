@@ -1,0 +1,103 @@
+.q-menu.popover {
+  border: 1px solid $color-outline;
+  overflow: visible;
+  width: 241px;
+  @include radius-2;
+
+  .q-banner {
+    padding: $space-2 $space-4;
+    gap: $space-4;
+    background-color: $neutral-95;
+
+    .q-banner__content {
+      color: $color-text1;
+      @include typo-title-2;
+    }
+
+    .q-banner__avatar {
+      height: $space-10;
+
+      .q-icon {
+        color: $neutral-30;
+        cursor: pointer;
+        font-size: $space-5;
+        text-align: center;
+      }
+
+    }
+  }
+
+  .popover-content {
+    background-color: $color-white;
+    color: $color-text2;
+    @include typo-body-3;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - $space-4 / 2);
+    width: $space-4;
+    height: $space-3;
+    background-color: $color-white;
+    clip-path: polygon(0% 100%, 100% 100%, 56% 6%, 53% 3%, 50% 0%, 47% 3%, 44% 6%);
+  }
+
+  &.top-position {
+    &::after {
+      content: '';
+      top: 100%;
+      clip-path: polygon(100% 0%, 0% 0%, 44% 94%, 47% 97%, 50% 100%, 53% 97%, 56% 94%)
+    }
+  }
+
+  &.right-position {
+    &::after {
+      content: '';
+      left: 99%;
+      top: 50%;
+      transform: translate(0%, -50%);
+      clip-path: polygon(100% 100%, 100% 0%, 6% 44%, 3% 47%, 0% 50%, 3% 53%, 6% 56%);
+    }
+  }
+
+  &.left-position {
+    &::after {
+      content: '';
+      left: -6%;
+      top: 50%;
+      transform: translate(0%, -50%);
+      clip-path: polygon(0% 0%, 0% 100%, 94% 56%, 97% 53%, 100% 50%, 97% 47%, 94% 44%);
+
+    }
+  }
+}
+
+.q-dark.q-menu.popover {
+  border-color: $dark-outline;
+
+  .q-banner {
+    background-color: $neutral-40;
+
+    .q-banner__content {
+      color: $color-white;
+    }
+
+    .q-banner__avatar {
+      .q-icon {
+        color: $color-white;
+      }
+    }
+  }
+
+  .popover-content {
+    color: $color-white;
+    background-color: $neutral-dark-40;
+  }
+
+  &::after {
+    content: '';
+    background-color: $neutral-dark-40;
+  }
+}

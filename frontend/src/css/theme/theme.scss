@@ -1,0 +1,16 @@
+@import 'src/css/fonts/fonts.scss';
+@import 'src/css/theme/controls/index';
+@import 'src/css/theme/widgets/index';
+
+/* "Iran Sans X FaNum", */
+
+body {
+  font-family:
+    'Vazir',
+    Arial,
+    -apple-system,
+    'Helvetica Neue',
+    Helvetica,
+    sans-serif;
+  @include typo-body-3;
+}

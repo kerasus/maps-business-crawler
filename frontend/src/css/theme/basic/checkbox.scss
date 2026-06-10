@@ -1,0 +1,31 @@
+.q-checkbox {
+    & > .q-checkbox__inner {
+        & > .q-checkbox__icon-container{
+            & > .material-icons{
+                        font-family: 'Material Icons';
+                        font-weight: normal;
+                        font-style: normal;
+                        display: inline-block;
+                        line-height: 1;
+                        text-transform: none;
+                        letter-spacing: normal;
+                        word-wrap: normal;
+                        white-space: nowrap;
+                        -webkit-font-smoothing: antialiased;
+                        text-rendering: optimizeLegibility;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-feature-settings: 'liga';
+            }
+        }
+    }
+}
+
+.q-checkbox__inner--truthy{
+    .q-checkbox__bg{
+        // width: $space-6;
+        // height: $space-6;
+        // border: unset;
+        // border-radius: 6px;
+        background-color: $secondary;
+    }
+}

@@ -1,0 +1,195 @@
+@mixin icon-button($important: 0) {
+  @if $important==1 {
+    & {
+      padding: $space-2 !important;
+      @include radius-2();
+    }
+    .q-icon {
+      font-size: $space-6 !important;
+    }
+    .q-btn__content{
+      line-height: $space-6 !important;
+    }
+  }
+    & {
+      padding: $space-2;
+    }
+    .q-icon {
+      font-size: $space-6;
+    }
+}
+@mixin text-icon-button {
+  & {
+    padding: $space-3 $space-6 $space-3 $space-4;
+  }
+  .q-icon {
+    font-size: $space-4;
+  }
+}
+
+body , .q-btn-group{
+  .q-btn {
+    padding: $space-3 $space-6;
+    @include radius-3();
+    @include typo-label-button;
+    .on-left {
+      margin-right: $space-1;
+    }
+    .q-icon {
+      font-size: 20px;
+    }
+    &:before {
+      box-shadow: none;
+    }
+    &.icon-button {
+      min-width: $space-10;
+      @include icon-button;
+    }
+    &.text-icon-button {
+      @include text-icon-button;
+    }
+    &.q-btn--round{
+      width: $space-10;
+      height: $space-10;
+      @include radius-round;
+      &:not(.q-btn--flat){
+        box-shadow: $shadow-2;
+      }
+    }
+    .q-btn__content{
+      display: flex;
+      flex-wrap: nowrap;
+      gap: $space-2;
+    }
+    &.q-btn--dense{
+      padding: $space-1 $space-6;
+      min-height: $space-4;
+      @include radius-2;
+      .q-btn__content{
+        .q-icon {
+          font-size: $space-4;
+        }
+        &.icon-button {
+          padding: $space-1;
+          min-height: unset;
+      }
+     }
+     &.icon-button {
+      padding: $space-1;
+      min-height: unset;
+      min-width: $space-6;
+      }
+      &.q-btn--outline:before{
+        border-color: currentColor;
+      }
+     }
+  
+  }
+  &.desktop {
+    .q-btn{
+      .q-focus-helper {
+        background-color: currentColor;
+      }
+      &.q-hoverable:hover {
+        &::before {
+          box-shadow:  $shadow-2;
+        }
+        .q-focus-helper {
+          opacity: 0;
+        }
+      }
+      &.q-focusable:focus {
+        .q-focus-helper{
+          opacity: 0;
+        }
+      }
+      &.q-btn--active {
+        &.q-hoverable {
+          box-shadow: unset;
+          &::before {
+            border: unset;
+          }
+        }
+          &::before {
+            box-shadow: $shadow-2;
+        }
+      }
+      &:disabled , .disabled {
+        background: $color-disable !important;
+        .q-btn__content{
+          color: $color-disable-variant;
+        }
+      }
+
+      &.q-btn--outline {
+        &.q-hoverable:hover {
+          &::before {
+            box-shadow:  unset;
+          }
+          .q-focus-helper {
+            opacity: 0.05;
+          }
+        }
+        &.q-focusable:focus {
+          .q-focus-helper{
+            opacity: 0.1;
+          }
+        }
+        &.q-btn--active , &.q-btn--pressed {
+          &.q-hoverable {
+            &::before {
+              border: 1px solid;
+              box-shadow: unset;
+            }
+            .q-focus-helper {
+              opacity: .2;
+            }
+          }
+        }
+        &:disabled , .disabled {
+          background: transparent !important;
+          &::before {
+            border-color: $color-disable ;
+          }
+        }
+      }
+
+      &.q-btn--flat {
+        &.q-hoverable:hover {
+          &::before {
+            box-shadow:  unset;
+          }
+          .q-focus-helper {
+            opacity: 0.05;
+          }
+        }
+        &.q-focusable:focus {
+          .q-focus-helper {
+            opacity: 0.1;
+          }
+        }
+        &.q-btn--active {
+          &.q-hoverable {
+            &::before {
+              box-shadow: unset;
+            }
+            .q-focus-helper {
+              opacity: .2;
+            }
+          }
+        }
+        &:disabled , .disabled {
+          background: transparent !important;
+        }
+      }
+    }
+  }
+}
+
+.q-btn-group{
+  &.icon-button{
+    .q-btn{
+      @include icon-button;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@mixin typo-display-1 {
+  & {
+    font-size: 57px;
+    font-weight: 700;
+    line-height: 64px;
+  }
+}
+
+@mixin typo-display-2 {
+  & {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+}
+
+@mixin typo-display-3 {
+  & {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+  }
+}
+
+@mixin typo-headline-1 {
+  & {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+}
+
+@mixin typo-headline-2 {
+  & {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+}
+
+@mixin typo-headline-3 {
+  & {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+}
+
+
+@mixin typo-title-1 {
+  & {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+@mixin typo-title-2 {
+  & {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+  }
+}
+
+@mixin typo-title-3 {
+  & {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.10000000149011612px;
+  }
+}
+
+@mixin typo-label-1 {
+  & {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.10000000149011612px;
+  }
+}
+
+@mixin typo-label-2 {
+  & {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.005em;
+  }
+}
+
+@mixin typo-label-3 {
+  & {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+}
+
+@mixin typo-label-button {
+  & {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+}
+
+@mixin typo-body-1 {
+  & {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+  }
+}
+
+@mixin typo-body-2 {
+  & {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+@mixin typo-body-3 {
+  & {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0025em;
+  }
+}
+
+@mixin typo-body-4 {
+  & {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+
+@mixin typo-body-5 {
+  & {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+
+.ltr {
+  direction: ltr #{"/* rtl:ignore */"}; // https://github.com/quasarframework/quasar/issues/5828#issuecomment-563248909
+}
+

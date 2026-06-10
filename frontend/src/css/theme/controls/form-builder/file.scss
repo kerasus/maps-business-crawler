@@ -1,0 +1,36 @@
+@import "assets";
+
+.form-builder-file {
+  //padding-bottom: 12px;
+  &.required {
+    @include form-builder-required-field;
+  }
+}
+
+.q-form.with-single-file-input {
+  position: relative;
+  .form-builder-file-picker {
+    .body-preview {
+      //padding-right: $space-15;
+    }
+  }
+  .form-action {
+    position: absolute;
+    bottom: $space-10;
+    right: $space-6;
+  }
+  &.has-uploaded-file {
+    .form-builder-file-picker {
+      .body-preview {
+        .file-preview {
+          .delete-file-action-column {
+            width: $space-10;
+            .q-btn {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

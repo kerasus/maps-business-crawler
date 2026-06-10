@@ -1,0 +1,87 @@
+@use "sass:map";
+
+$spacing-base: 4px;
+$spacing-none: 0;
+$space-1: $spacing-base * 1;
+$space-2: $spacing-base * 2;
+$space-3: $spacing-base * 3;
+$space-4: $spacing-base * 4;
+$space-5: $spacing-base * 5;
+$space-6: $spacing-base * 6;
+$space-7: $spacing-base * 7;
+$space-8: $spacing-base * 8;
+$space-9: $spacing-base * 9;
+$space-10: $spacing-base * 10;
+$space-11: $spacing-base * 11;
+$space-12: $spacing-base * 12;
+$space-13: $spacing-base * 13;
+$space-14: $spacing-base * 14;
+$space-15: $spacing-base * 15;
+$space-16: $spacing-base * 16;
+$space-17: $spacing-base * 17;
+$space-18: $spacing-base * 18;
+$space-19: $spacing-base * 19;
+$space-20: $spacing-base * 20;
+$space-21: $spacing-base * 21;
+
+/* ------------------------------------ */
+$q-space-none: (
+  x: $spacing-none,
+  y: $spacing-none,
+);
+$q-space-xs: (
+  x: $space-2, 
+  y: $space-2,
+);
+$q-space-sm: (
+  x: $space-4, 
+  y: $space-4,
+);
+$q-space-md: (
+  x: $space-8, 
+  y: $space-8,
+);
+$q-space-lg: (
+  x: $space-14, 
+  y: $space-14,
+);
+$q-space-xl: (
+  x: $space-16, 
+  y: $space-16,
+);
+
+// Define your custom gutters here
+$custom-gutters : (
+  'xs': $space-4, 
+  'sm': $space-8, 
+  'md': $space-10, 
+  'lg': $space-12, 
+  'xl': $space-14 
+);
+
+
+// Generate all gutter configurations
+@mixin generate-gutters() {
+  @each $gutter-size, $gutter-width in $custom-gutters {
+    // Loop through breakpoints for media queries
+    @each $break-name, $break-width in $sizes {
+      @include media-min-width($break-name) {
+        // Apply margins on the container for specific breakpoint and gutter size
+        .q-col-gutter-#{$gutter-size}-#{$break-name} {
+          margin-left: -$gutter-width !important;
+          margin-top: -$gutter-width !important;
+
+          > * {
+            // Apply paddings on the columns inside for specific breakpoint and gutter size
+            padding-left: $gutter-width !important;
+            // Include the top padding as per your requirement
+            padding-top: $gutter-width !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Include the mixin in your SCSS
+@include generate-gutters();

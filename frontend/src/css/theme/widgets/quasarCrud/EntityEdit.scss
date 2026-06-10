@@ -1,0 +1,10 @@
+.entity-edit {
+  & > .q-card__section {
+    padding: 0;
+    & > .q-expansion-item {
+      border-radius: 0;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}

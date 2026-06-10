@@ -1,0 +1,8 @@
+@import "assets";
+
+.form-builder-input {
+  //padding-bottom: 12px;
+  &.required {
+    @include form-builder-required-field;
+  }
+}

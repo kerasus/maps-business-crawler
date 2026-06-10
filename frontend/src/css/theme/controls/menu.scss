@@ -1,0 +1,12 @@
+.list-menu{
+    padding: $space-4;
+    box-shadow: $shadow-3;
+    //TODO should change it and remove !important
+    max-width: unset !important;
+    @include radius-2;
+}
+.form-menu{
+    padding: $space-6;
+    box-shadow: $shadow-3;
+    @include radius-2;
+}

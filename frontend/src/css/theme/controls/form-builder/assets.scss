@@ -1,0 +1,50 @@
+@mixin form-builder-required-field {
+  .q-field {
+    .q-field__inner {
+      .q-field__control {
+        .q-field__control-container {
+          .q-field__label {
+            overflow: visible;
+            padding-left: 20px;
+            &:after {
+              position: absolute;
+              left: 0;
+              top: 50%;
+              color: $red;
+              transform: translateY(-50%);
+              /* ph:asterisk-simple */
+              content: "\e988";
+              width: max-content;
+              height: max-content;
+              display: flex !important;
+              align-items: center;
+              justify-content: center;
+              font-family: Phosphor !important;
+              speak: never;
+              font-style: normal;
+              font-weight: 400;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+          }
+        }
+      }
+    }
+    &.required{
+      .q-field__inner {
+        .q-field__control {
+          .q-field__append{
+            .q-icon{
+              &.OMS-Icon__close-circle{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

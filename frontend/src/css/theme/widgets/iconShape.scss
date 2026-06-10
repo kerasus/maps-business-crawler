@@ -1,0 +1,12 @@
+.icon-shape {
+  width: $space-12;
+  height: $space-12;
+  border-radius: 0.5rem;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $space-8;
+  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+}

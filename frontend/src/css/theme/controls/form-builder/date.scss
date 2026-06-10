@@ -1,0 +1,120 @@
+@import "assets";
+@import "../button";
+
+.form-builder-date {
+  .q-field {
+    .q-field__inner{
+      .q-field__control{
+        .q-field__control-container {
+          .q-field__native{
+            padding-right: $space-1;
+          }
+        }
+      }
+    }
+  }
+  &.required {
+    @include form-builder-required-field;
+  }
+}
+
+.q-menu, .q-dialog {
+  max-height: unset;
+  .q-date {
+    .q-date__header {
+      .q-date__header-title {
+        .q-btn {
+          @include icon-button;
+        }
+      }
+    }
+    .q-date__main {
+      display: block;
+      .q-date__content {
+        .q-date__view {
+          padding: 0;
+          min-height: unset;
+          &.q-date__calendar {
+            .q-date__navigation {
+              justify-content: center;
+              .q-date__arrow {
+                .q-btn {
+                  min-width: $space-8;
+                  max-width: $space-8;
+                  @include icon-button;
+                }
+              }
+              .relative-position {
+                max-width: 70px;
+                & > div {
+                  width: 100%;
+                  .q-btn {
+                    width: 100%;
+                    padding: $space-4 $space-2;
+                  }
+                }
+              }
+              .relative-position:nth-child(5) {
+                max-width: 50px;
+              }
+            }
+            .q-date__calendar-days-container {
+              .q-date__calendar-days {
+                .q-date__calendar-item {
+                  .q-btn {
+                    @include icon-button;
+                    @include radius-2();
+                  }
+                }
+              }
+            }
+          }
+          &.q-date__months {
+            gap: $space-1;
+            .q-date__months-item {
+              flex: 0 0 30%;
+              .q-btn {
+                width: 100%;
+                padding: $space-4 0;
+              }
+            }
+          }
+          &.q-date__years {
+            .q-date__years-content {
+              justify-content: center;
+            }
+          }
+        }
+      }
+      .time-picker{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        padding: $spacing-none $space-2;
+        gap: $space-2;
+        .q-field{
+          .q-field__inner{
+            .q-field__control{
+              .q-field__control-container{
+                .q-field__native{
+                  text-align: center;
+                  padding: unset;
+                }
+              }
+            }
+          }
+        }
+        .time-separator{
+          display: flex;
+          align-items: center;
+          font-size: $space-6;
+        }
+      }
+      .q-date__actions{
+        padding: unset;
+      }
+    }
+  }
+}
+
+

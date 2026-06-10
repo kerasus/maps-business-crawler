@@ -1,0 +1,358 @@
+$colors: (
+  "primary": #82d616,
+  "primary-0": #000000,
+  "primary-10": #0C2F6C,
+  "primary-20": #144383,
+  "primary-30": #205FA3,
+  "primary-40": #2E7FC3,
+  "primary-50": #40A2E3,
+  "primary-60": #6DC2EE,
+  "primary-70": #8CD8F6,
+  "primary-80": #A7E3FA,
+  "primary-90": #C3EDFE,
+  "primary-95": #DDF5FF,
+  "primary-99": #EDFAFF,
+  "primary-100": #FFFFFF,
+
+  "secondary": #cb0c9f,
+  "secondary-0": #000000,
+  "secondary-10": #014E51,
+  "secondary-20": #02625C,
+  "secondary-30": #047A67,
+  "secondary-40": #06926D,
+  "secondary-50": #09AA70,
+  "secondary-60": #3BCC89,
+  "secondary-70": #63E59C,
+  "secondary-80": #99F6B9,
+  "secondary-90": #CBFAD6,
+  "secondary-95": #E5FFEB,
+  "secondary-99": #F4FFF7,
+  "secondary-100": #FFFFFF,
+
+  "neutral":#76808F,
+  "neutral-0":#000000,
+  "neutral-10":#101A29,
+  "neutral-20":#212E42,
+  "neutral-30":#37465C,
+  "neutral-40":#526075,
+  "neutral-50":#76808F,
+  "neutral-60":#979EA8,
+  "neutral-70":#B8BCC2,
+  "neutral-80":#D5D6D8,
+  "neutral-90":#E6E6E6,
+  "neutral-95":#F5F5F5,
+  "neutral-99":#FBFBFB,
+  "neutral-100":#FFFFFF,
+
+  "neutral-dark":#535762,
+  "neutral-dark-0":#000000,
+  "neutral-dark-10":#10152B,
+  "neutral-dark-20":#1B2134,
+  "neutral-dark-30":#2A3041,
+  "neutral-dark-40":#3E424E,
+  "neutral-dark-50":#535762,
+  "neutral-dark-60":#757984,
+  "neutral-dark-70":#989BA4,
+  "neutral-dark-80":#BEC1C8,
+  "neutral-dark-90":#DBDDE2,
+  "neutral-dark-95":#EDEDEF,
+  "neutral-dark-99":#FBFBFB,
+  "neutral-dark-100":#FFFFFF,
+
+  "error": #EE4266,
+  "error-0": #000000,
+  "error-10": #720C48,
+  "error-20": #8A154F,
+  "error-30": #AB2158,
+  "error-40": #CC305F,
+  "error-50": #EE4266,
+  "error-60": #F4707F,
+  "error-70": #F98D8F,
+  "error-80": #FFAEB0,
+  "error-90": #FFC8C9,
+  "error-95": #FFDEDE,
+  "error-99": #FFF1F1,
+  "error-100 ": #FFFFFF,
+
+  "success": #0DAA94,
+  "success-dark": #0DAA94,
+  "success-light": #CDFFE5,
+  "success-lighten": #EAFFF4,
+
+  "info": #5AB2FF,
+  "info-dark": #5AB2FF,
+  "info-light": #D9EDFF,
+  "info-lighten": #EBF6FF,
+
+  "warning": #FF7F3E,
+  "warning-dark": #FF7F3E,
+  "warning-light": #FFD9C5,
+  "warning-lighten": #FDE3D6,
+
+  /* extra colors*/
+  "gray-100": #f8f9fa,
+);
+
+/* extra colors*/
+$gray-100: map-get($colors, "gray-100");
+
+/* quasar variables */
+$primary: map-get($colors, "primary");
+$primary-0: map-get($colors, "primary-0");
+$primary-10: map-get($colors, "primary-10");
+$primary-20: map-get($colors, "primary-20");
+$primary-30: map-get($colors, "primary-30");
+$primary-40: map-get($colors, "primary-40");
+$primary-50: map-get($colors, "primary-50");
+$primary-60: map-get($colors, "primary-60");
+$primary-70: map-get($colors, "primary-70");
+$primary-80: map-get($colors, "primary-80");
+$primary-90: map-get($colors, "primary-90");
+$primary-95: map-get($colors, "primary-95");
+$primary-99: map-get($colors, "primary-99");
+$primary-100: map-get($colors, "primary-100");
+
+$secondary: map-get($colors, "secondary");
+$secondary-0: map-get($colors, "secondary-0");
+$secondary-10: map-get($colors, "secondary-10");
+$secondary-20: map-get($colors, "secondary-20");
+$secondary-30: map-get($colors, "secondary-30");
+$secondary-40: map-get($colors, "secondary-40");
+$secondary-50: map-get($colors, "secondary-50");
+$secondary-60: map-get($colors, "secondary-60");
+$secondary-70: map-get($colors, "secondary-70");
+$secondary-80: map-get($colors, "secondary-80");
+$secondary-90: map-get($colors, "secondary-90");
+$secondary-95: map-get($colors, "secondary-95");
+$secondary-99: map-get($colors, "secondary-99");
+$secondary-100: map-get($colors, "secondary-100");
+
+$neutral: map-get($colors, "neutral" );
+$neutral-0: map-get($colors, "neutral-0" );
+$neutral-10: map-get($colors, "neutral-10" );
+$neutral-20: map-get($colors, "neutral-20" );
+$neutral-30: map-get($colors, "neutral-30" );
+$neutral-40: map-get($colors, "neutral-40" );
+$neutral-50: map-get($colors, "neutral-50" );
+$neutral-60: map-get($colors, "neutral-60" );
+$neutral-70: map-get($colors, "neutral-70" );
+$neutral-80: map-get($colors, "neutral-80" );
+$neutral-90: map-get($colors, "neutral-90" );
+$neutral-95: map-get($colors, "neutral-95" );
+$neutral-99: map-get($colors, "neutral-99" );
+$neutral-100: map-get($colors, "neutral-100" );
+
+$neutral-dark : map-get($colors, "neutral-dark " );
+$neutral-dark-0 : map-get($colors, "neutral-dark-0" );
+$neutral-dark-10 : map-get($colors, "neutral-dark-10" );
+$neutral-dark-20 : map-get($colors, "neutral-dark-20" );
+$neutral-dark-30 : map-get($colors, "neutral-dark-30" );
+$neutral-dark-40 : map-get($colors, "neutral-dark-40" );
+$neutral-dark-50 : map-get($colors, "neutral-dark-50" );
+$neutral-dark-60 : map-get($colors, "neutral-dark-60" );
+$neutral-dark-70 : map-get($colors, "neutral-dark-70" );
+$neutral-dark-80 : map-get($colors, "neutral-dark-80" );
+$neutral-dark-90 : map-get($colors, "neutral-dark-90" );
+$neutral-dark-95 : map-get($colors, "neutral-dark-95" );
+$neutral-dark-99 : map-get($colors, "neutral-dark-99" );
+$neutral-dark-100 : map-get($colors, "neutral-dark-100" );
+
+$error: map-get($colors, "error");
+$error-0: map-get($colors, "error-0");
+$error-10: map-get($colors, "error-10");
+$error-20: map-get($colors, "error-20");
+$error-30: map-get($colors, "error-30");
+$error-40: map-get($colors, "error-40");
+$error-50: map-get($colors, "error-50");
+$error-60: map-get($colors, "error-60");
+$error-70: map-get($colors, "error-70");
+$error-80: map-get($colors, "error-80");
+$error-90: map-get($colors, "error-90");
+$error-95: map-get($colors, "error-95");
+$error-99: map-get($colors, "error-99");
+$error-100: map-get($colors, "error-100");
+
+$success: map-get($colors, "success");
+$success-dark: map-get($colors, "success-dark");
+$success-light: map-get($colors, "success-light");
+$success-lighten: map-get($colors, "success-lighten");
+
+$info: map-get($colors, "info");
+$info-dark: map-get($colors, "info-dark");
+$info-light: map-get($colors, "info-light");
+$info-lighten: map-get($colors, "info-lighten");
+
+$warning: map-get($colors, "warning");
+$warning-dark: map-get($colors, "warning-dark");
+$warning-light: map-get($colors, "warning-light");
+$warning-lighten: map-get($colors, "warning-lighten");
+
+/* lights */
+$light-container-primary: $primary-90;
+$light-on-container-primary: $primary-10;
+$light-container-secondary: $secondary-90;
+$light-on-container-secondary: $secondary-10;
+$light-container-error: $error-90;
+$light-on-container-error: $error-10;
+$light-background: $gray-100;
+$light-on-background: $neutral-10;
+$light-surface: $neutral-100;
+$light-on-surface: $neutral-10;
+$light-surface1: mix( $primary,$light-surface, 5%);
+$light-surface2: mix( $primary,$light-surface, 8%);
+$light-surface3: mix( $primary,$light-surface, 11%);
+$light-surface4: mix( $primary,$light-surface, 12%);
+$light-surface5: mix( $primary,$light-surface, 14%);
+$light-outline-variant: $neutral-70;
+$light-outline: $neutral-80;
+$light-disable-variant: $neutral-60;
+$light-disable: $neutral-80;
+$light-text1: $neutral-20;
+$light-text2: $neutral-40;
+$light-text3: $neutral-60;
+$light-white: $neutral-100;
+$light-black: $neutral-0;
+
+/* darks */
+$dark-container-primary: $primary-10;
+$dark-on-container-primary: $primary-90;
+$dark-container-secondary: $secondary-10;
+$dark-on-container-secondary: $secondary-90;
+$dark-container-error: $error-10;
+$dark-on-container-error: $error-90;
+$dark-background: $neutral-dark-10;
+$dark-on-background: $neutral-dark-100;
+$dark-surface: $neutral-dark-30;
+$dark-on-surface: $neutral-dark-100;
+$dark-surface1: mix( $neutral-dark-20,$dark-surface, 5%);
+$dark-surface2: mix( $neutral-dark-20,$dark-surface, 8%);
+$dark-surface3: mix( $neutral-dark-20,$dark-surface, 11%);
+$dark-surface4: mix( $neutral-dark-20,$dark-surface, 12%);
+$dark-surface5: mix( $neutral-dark-20,$dark-surface, 14%);
+$dark-outline-variant: $neutral-dark-30;
+$dark-outline: $neutral-dark-50;
+$dark-disable-variant: $neutral-dark-60;
+$dark-disable: $neutral-dark-80;
+$dark-text1: $neutral-dark-100;
+$dark-text2: $neutral-dark-100;
+$dark-text3: $neutral-dark-100;
+$dark-white: $neutral-100;
+$dark-black: $neutral-0;
+
+/* main colors */
+/* mmmm */
+$mainColors: (
+  "color-container-primary": $light-container-primary,
+  "color-on-container-primary": $light-on-container-primary,
+  "color-container-secondary": $light-container-secondary,
+  "color-on-container-secondary": $light-on-container-secondary,
+  "color-container-error": $light-container-error,
+  "color-on-container-error": $light-on-container-error,
+  "color-background": $light-background,
+  "color-on-background": $light-on-background,
+  "color-surface": $light-surface,
+  "color-on-surface": $light-on-surface,
+  "color-surface1": $light-surface1,
+  "color-surface2": $light-surface2,
+  "color-surface3": $light-surface3,
+  "color-surface4": $light-surface4,
+  "color-surface5": $light-surface5,
+  "color-outline-variant": $light-outline-variant,
+  "color-outline": $light-outline,
+  "color-disable-variant": $light-disable-variant,
+  "color-disable": $light-disable,
+  "color-text1": $light-text1,
+  "color-text2": $light-text2,
+  "color-text3": $light-text3,
+  "color-white": $light-white,
+  "color-black": $light-black,
+);
+
+$color-container-primary: map-get($mainColors, "color-container-primary");
+$color-on-container-primary: map-get($mainColors, "color-on-container-primary");
+$color-container-secondary: map-get($mainColors, "color-container-secondary");
+$color-on-container-secondary: map-get($mainColors, "color-on-container-secondary");
+$color-container-error: map-get($mainColors, "color-container-error");
+$color-on-container-error: map-get($mainColors, "color-on-container-error");
+$color-background: map-get($mainColors, "color-background");
+$color-on-background: map-get($mainColors, "color-on-background");
+$color-surface: map-get($mainColors, "color-surface");
+$color-on-surface: map-get($mainColors, "color-on-surface");
+$color-surface1: map-get($mainColors, "color-surface1");
+$color-surface2: map-get($mainColors, "color-surface2");
+$color-surface3: map-get($mainColors, "color-surface3");
+$color-surface4: map-get($mainColors, "color-surface4");
+$color-surface5: map-get($mainColors, "color-surface5");
+$color-outline-variant: map-get($mainColors, "color-outline-variant");
+$color-outline: map-get($mainColors, "color-outline");
+$color-disable-variant: map-get($mainColors, "color-disable-variant");
+$color-disable: map-get($mainColors, "color-disable");
+$color-text1: map-get($mainColors, "color-text1");
+$color-text2: map-get($mainColors, "color-text2");
+$color-text3: map-get($mainColors, "color-text3");
+$color-white: map-get($mainColors, "color-white");
+$color-black: map-get($mainColors, "color-black");
+
+/* background colors */
+@mixin generate-background-color-for-main-colors-classes() {
+  //$primary$secondary$-map-get($colors, "primary-1");
+  @each $key, $value in $colors {
+    @if str-index($key, "primary") or str-index($key, "secondary") or str-index($key, "success") or str-index($key, "error") or str-index($key, "info") or str-index($key, "warning") or str-index($key, "neutral") or str-index($key, "neutral-dark") or str-index($key, "color"){
+      .bg-#{$key} {
+        background-color: $value;
+      }
+      //$filteredColors: map-merge($filteredColors, ( $key: map-get($colors, $key) ) );
+    }
+  }
+}
+/* background colors maincolor */
+@mixin generate-background-maincolor-for-main-colors-classes() {
+  //$primary$secondary$-map-get($colors, "primary-1");
+  @each $key, $value in $mainColors {
+    @if str-index($key, "color"){
+      .bg-#{$key} {
+        background-color: $value;
+      }
+      //$filteredColors: map-merge($filteredColors, ( $key: map-get($colors, $key) ) );
+    }
+  }
+}
+
+/* text color */
+@mixin generate-color-for-main-colors-classes() {
+  @each $key, $value in $colors {
+    @if str-index($key, "primary") or str-index($key, "secondary") or str-index($key, "success") or str-index($key, "error") or str-index($key, "info") or str-index($key, "warning") or str-index($key, "neutral") or str-index($key, "neutral-dark") or str-index($key, "color"){
+      .text-#{$key} {
+        color: $value !important;
+      }
+      //$filteredColors: map-merge($filteredColors, ( $key: map-get($colors, $key) ) );
+    }
+  }
+}
+
+/* text maincolor */
+@mixin generate-text-colors-of-maincolors() {
+  @each $key, $value in $mainColors {
+    @if str-index($key, "color"){
+      .text-#{$key} {
+        color: $value !important;
+      }
+      //$filteredColors: map-merge($filteredColors, ( $key: map-get($colors, $key) ) );
+    }
+  }
+}
+
+/* border colors */
+@mixin generate-border-color-classes() {
+  @each $key, $value in $colors {
+    .border-#{$key} {
+      border-color: $value;
+    }
+  }
+}
+
+@include generate-border-color-classes();
+@include generate-text-colors-of-maincolors();
+@include generate-color-for-main-colors-classes();
+@include generate-background-color-for-main-colors-classes();
+@include generate-background-maincolor-for-main-colors-classes();

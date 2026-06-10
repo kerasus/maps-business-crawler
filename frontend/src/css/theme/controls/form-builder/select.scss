@@ -1,0 +1,21 @@
+@import "assets";
+
+.form-builder-select {
+  //padding-bottom: 12px;
+  &.required {
+    @include form-builder-required-field;
+    .q-field{
+      .q-field__inner{
+        .q-field__control{
+          .q-field__append{
+            .q-icon{
+              &.q-field__focusable-action{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+::-webkit-scrollbar{
+    background-color: $neutral-99;
+    width: $space-2;
+    height: $space-2;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $neutral-80;
+    @include radius-2;
+}
